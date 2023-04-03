@@ -91,8 +91,7 @@
             data-target="#modal-signup" display="inline-block" justify-content: space-around>Voltar</button></a>
 
         <h2>Mid Carrinho</h2>
-        <p class="lead">Informe abaixo seus dados para pagamento e endereço de entrega. Não esqueça de conferir os
-          produtos e quantidades no carrinho antes de finalizar o pagamento.</p>
+        <p class="lead">Informe abaixo seus dados para pagamento e endereço de entrega. Não esqueça de conferir os produtos e quantidades no carrinho antes de finalizar o pagamento.</p>
       </div>
 
       <div class="row g-5">
@@ -145,7 +144,7 @@
           </form>
         </div>
         <div class="col-md-7 col-lg-8">
-          <h4 class="mb-3">Endereço de cobrança</h4>
+          <h4 class="mb-3">Cadastro cliente</h4>
           <form class="needs-validation" novalidate>
             <div class="row g-3">
               <div class="col-sm-6">
@@ -196,19 +195,60 @@
 
             <hr class="my-4">
 
+           <h4 class="mb-3">Pagamento</h4>
+
+          <div class="my-3">
             <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="same-address">
-              <label class="form-check-label" for="same-address">Endereço de entrega é o mesmo da cobrança</label>
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+              <label class="form-check-label" for="credit">Cartão de crédito</label>
+            </div>
+            <div class="form-check">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="debit">Cartão de débito</label>
+            </div>
+            <div class="form-check">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="paypal">PayPal</label>
+            </div>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="cc-name" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required>
+              <small class="text-muted">Nome impresso no cartão</small>
+              <div class="invalid-feedback">
+                É necessário informar o nome válido
+              </div>
             </div>
 
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="save-info">
-              <label class="form-check-label" for="save-info">Salvar essa informação para compras futuras</label>
+            <div class="col-md-6">
+              <label for="cc-number" class="form-label">Número do cartão</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="" required>
+              <div class="invalid-feedback">
+                É necessário informar um número válido
+              </div>
             </div>
 
+            <div class="col-md-3">
+              <label for="cc-expiration" class="form-label">Data de expiração</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+              <div class="invalid-feedback">
+                É necessário informar data de vencimento
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+              <div class="invalid-feedback">
+                É necessário informar o código de segurança
+              </div>
+            </div>
+          </div>
             <hr class="my-4">
 
-            <button class="w-100 btn btn-primary btn-lg" type="submit">Realizar Pedido</button>
+            <button class="w-100 btn btn-primary btn-lg" type="submit" id="submit">Realizar Pedido</button>
           </form>
         </div>
       </div>
@@ -229,7 +269,9 @@
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
 
-  <script src="form-validation.js"></script>
+  <script src="form-script.js"></script>
+  <script src="rotas-cliente.js"></script>
+  
 </body>
 
 </html>
