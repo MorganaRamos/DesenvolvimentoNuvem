@@ -8,7 +8,7 @@
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.104.2">
   <link type="image/png" rel="icon" href="favicon.jpg">
-  <title>Mid Carrinho</title>
+  <title>Cadastro - Mid Burguer </title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
 
@@ -70,12 +70,9 @@
     .container {
       max-width: 960px;
     }
-    
   </style>
 
 
-  <!-- Custom styles for this template -->
- 
 </head>
 
 <body class="bg-light">
@@ -84,144 +81,140 @@
     <main>
       <div class="py-5 text-center">
 
-        <img src="carrinho.png" alt="carrinho de compras" width="90px">
+        <h2>Mid Burguer</h2>
 
-        <a href="cardapio.html"><button class="btn btn-light bg-dark-blur border-0 color-white btn-login-cadastro"
-            style="border-radius: 10px;float:right; margin-top: 1%;margin-right: 1%;" type="button" data-toggle="modal"
-            data-target="#modal-signup" display="inline-block" justify-content: space-around>Voltar</button></a>
+        <div class="d-flex gap-2 justify-content-center py-5">
+         
+          <a href="pedido.html">
+           <button class="btn btn-primary rounded-pill px-3" type="button">Cadastro Pedido</button>
+          </a> 
+          <a href="produto.html"> 
+          <button class="btn btn-primary rounded-pill px-3" type="button">Cadastro Produto</button>
+          </a>
+          
 
-        <h2>Mid Carrinho</h2>
-        <p class="lead">Informe abaixo seus dados para pagamento e endereço de entrega. Não esqueça de conferir os
-          produtos e quantidades no carrinho antes de finalizar o pagamento.</p>
+        </div>
+
       </div>
 
-      <div class="row g-5">
-        <div class="col-md-5 col-lg-4 order-md-last">
-          <h4 class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-primary">Seu carinho</span>
-            <span class="badge bg-primary rounded-pill">3</span>
-          </h4>
-          <ul class="list-group mb-3">
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Mid Bacon</h6>
-                <small class="text-muted">molho separado</small>
-              </div>
-              <span class="text-muted">R$20,00</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Refrigerante 350ml</h6>
-                <small class="text-muted">Coca-cola</small>
-              </div>
-              <span class="text-muted">R$6,00</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Mid Onions</h6>
-                <small class="text-muted">sem observações</small>
-              </div>
-              <span class="text-muted">R$15,00</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between bg-light">
-              <div class="text-success">
-                <h6 class="my-0">Codigo promocional</h6>
-                <small>MIDLOVER</small>
-              </div>
-              <span class="text-success">−R$5,00</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-              <span>Total (R$)</span>
-              <strong>R$36,00</strong>
-            </li>
-          </ul>
+      <!-- FORM PARA CADASTRO DE CLIENTE -->
 
+      <div class="col-md-7 col-lg-8 mx-auto">
 
-          <form class="card p-2">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Código promocional">
-              <button type="submit" class="btn btn-secondary">Resgatar</button>
+        <h4 class="mb-3">Cadastro cliente</h4>
+
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="firstName" placeholder=" Maria" value="" required>
+              <div class="invalid-feedback"> O primeiro nome é necessário.</div>
             </div>
-          </form>
-        </div>
-        <div class="col-md-7 col-lg-8">
-          <h4 class="mb-3">Endereço de cobrança</h4>
-          <form class="needs-validation" novalidate>
-            <div class="row g-3">
-              <div class="col-sm-6">
-                <label for="firstName" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  O primeiro nome é necessário.
-                </div>
-              </div>
 
-              <div class="col-sm-6">
-                <label for="lastName" class="form-label">Sobrenome</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  O sobrenome é necessário.
-                </div>
-              </div>
-
-              <div class="col-12">
-                <label for="email" class="form-label">Email <span class="text-muted">(Opcional)</span></label>
-                <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com">
-                <div class="invalid-feedback">
-                  Por favor, coloque seu endereço de email para receber notificações de entrega.
-                </div>
-              </div>
-
-              <div class="col-12">
-                <label for="address" class="form-label">Endereço</label>
-                <input type="text" class="form-control" id="address" placeholder="Av. nome, n. 0000" required>
-                <div class="invalid-feedback">
-                  Por favor, coloque seu endereço de entrega
-                </div>
-              </div>
-
-              <div class="col-12">
-                <label for="address2" class="form-label">Complemento <span class="text-muted">(Opcional)</span></label>
-                <input type="text" class="form-control" id="address2" placeholder="apartamento ou casa">
-              </div>
-
-              <div class="col-md-3">
-                <label for="zip" class="form-label">CEP</label>
-                <input type="text" class="form-control" id="zip" placeholder="" required>
-                <div class="invalid-feedback">
-                  O CEP é necessário.
-                </div>
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Sobrenome</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Silva" value="" required>
+              <div class="invalid-feedback">
+                O sobrenome é necessário.
               </div>
             </div>
 
-            <hr class="my-4">
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-muted">(Opcional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com">
+              <div class="invalid-feedback">
+                Por favor, coloque seu endereço de email para receber informações sobre o pedido.
+              </div>
+            </div>
 
+            <div class="col-12">
+              <label for="address" class="form-label">Endereço</label>
+              <input type="text" class="form-control" id="address" placeholder="Av. nome, n. 0000" required>
+              <div class="invalid-feedback">
+                Por favor, coloque seu endereço de entrega.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label">Complemento <span class="text-muted">(Opcional)</span></label>
+              <input type="text" class="form-control" id="address2" placeholder="apartamento ou casa">
+            </div>
+
+            <div class="col-sm-6">
+              <label for="zip" class="form-label">CEP</label>
+              <input type="text" class="form-control" id="zip" placeholder="00000-000" required>
+              <div class="invalid-feedback">O CEP é necessário.</div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <!--FORM PARA CADASTRO DE PAGAMENTO -->
+
+          <h4 class="mb-3">Cadastro de Dados para Pagamento</h4>
+
+          <div class="my-3">
             <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="same-address">
-              <label class="form-check-label" for="same-address">Endereço de entrega é o mesmo da cobrança</label>
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+              <label class="form-check-label" for="credit">Cartão de crédito</label>
             </div>
-
             <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="save-info">
-              <label class="form-check-label" for="save-info">Salvar essa informação para compras futuras</label>
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="debit">Cartão de débito</label>
+            </div>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="cc-name" class="form-label">Nome no cartão</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required>
+              <small class="text-muted">Nome impresso no cartão</small>
+              <div class="invalid-feedback">
+                É necessário informar o nome válido
+              </div>
             </div>
 
-            <hr class="my-4">
+            <div class="col-md-6">
+              <label for="cc-number" class="form-label">Número do cartão</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="" required>
+              <div class="invalid-feedback">
+                É necessário informar um número válido
+              </div>
+            </div>
 
-            <button class="w-100 btn btn-primary btn-lg" type="submit">Realizar Pedido</button>
-          </form>
-        </div>
+            <div class="col-md-3">
+              <label for="cc-expiration" class="form-label">Data de expiração</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="00/00" required>
+              <div class="invalid-feedback">
+                É necessário informar data de vencimento
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+              <div class="invalid-feedback">
+                É necessário informar o código de segurança
+              </div>
+            </div>
+          </div>
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit" id="submit">Finalizar Cadastro</button>
+        </form>
       </div>
-    </main>
+  </div>
+  </main>
 
-    <footer class="my-5 pt-5 text-muted text-center text-small">
-      <p class="mb-1">&copy; 2022 MidBurguer</p>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a href="#">Privacy</a></li>
-        <li class="list-inline-item"><a href="#">Terms</a></li>
-        <li class="list-inline-item"><a href="#">Support</a></li>
-      </ul>
-    </footer>
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2022 MidBurguer</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
   </div>
 
 
@@ -229,7 +222,10 @@
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
 
-  <script src="form-validation.js"></script>
+  <script src="form-validacao.jss"></script>
+  <script src="pagamento.js"></script>
+  <script src="cliente.js"></script>
+
 </body>
 
 </html>

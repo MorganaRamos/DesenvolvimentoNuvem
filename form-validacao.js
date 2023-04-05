@@ -1,11 +1,11 @@
-// desabilitando submissão de formulario se campos estiverem indisponivels
+// validação - desabilitando submissão de formulario se campos estiverem indisponivels
 (() => {
   'use strict'
 
-  // atualiza os formularios apr a aplicação 
+  // Validação - atualiza os formularios para aplicação 
   const forms = document.querySelectorAll('.needs-validation')
 
-  // Loop over them and prevent submission
+  // validação -impedindo a submissão
   Array.from(forms).forEach(form => {
     form.addEventListener('submit', event => {
       if (!form.checkValidity()) {
