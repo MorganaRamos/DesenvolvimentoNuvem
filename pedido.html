@@ -82,26 +82,33 @@
       <div class="py-5 text-center">
         
         <h2>Cadastro Pedido - Mid Burguer</h2>
+
+        <div class="d-flex gap-2 justify-content-center py-5">
+         <a href="index.html">
+           <button class="btn btn-primary rounded-pill px-3" type="button">Cadastro cliente</button>
+          </a> 
+          <a href="produto.html"> 
+          <button class="btn btn-primary rounded-pill px-3" type="button">Cadastro Produto</button>
+          </a>
+          
        
       </div>
-     <div class="col-md-7 col-lg-8">
+         <div class="col-md-7 col-lg-8 mx-auto">
          
-        <h4 class="mb-3">Cadastro de Pedido</h4>
-          <form class="needs-validation" novalidate>
+        <form class="needs-validation" novalidate>
             <div class="row g-3">
       
            
           <div class="row gy-3">
             <div class="col-12">
               <label for="nomeProd" class="form-label">Nome Produto</label>
-              <input type="text" class="form-control" id="nomeCliente" placeholder="" required>
-              <small class="text-muted">Nome Produto</small>
+              <input type="text" class="form-control" id="nomeCliente" placeholder="Combo Mid" required>
               <div class="invalid-feedback">É necessário informar o nome do produto</div>
             </div>
 
             <div class="col-12">
               <label for="cliente" class="form-label">Cliente</label>
-              <input type="text" class="form-control" id="cliente" placeholder="" required>
+              <input type="text" class="form-control" id="cliente" placeholder="João Souza" required>
               <div class="invalid-feedback">É necessário informar o cliente</div>
             </div>
 
@@ -116,7 +123,7 @@
       
             <hr class="my-4">
 
-            <button class="w-100 btn btn-primary btn-lg" type="submit" id="submit">Cadastrar pedido</button>
+            <button class="w-100 btn btn-primary btn-lg" type="submit" id="submit">Cadastrar Pedido</button>
           </form>
         </div>
       </div>
